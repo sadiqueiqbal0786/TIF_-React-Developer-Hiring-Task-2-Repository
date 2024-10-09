@@ -53,6 +53,7 @@ const InterviewDetailsForm: React.FC<{
   return (
     <Box width="100%" as="form" onSubmit={handleSubmit as any}>
       <Box width="100%">
+        <Box position="relative" zIndex={10}>
         <FormSelect
           label="Interview Mode"
           placeholder="Select interview mode"
@@ -66,6 +67,8 @@ const InterviewDetailsForm: React.FC<{
           error={errors?.interviewMode}
           touched={touched?.interviewMode}
         />
+        </Box>
+        <Box position="relative" zIndex={9}>
         <FormSelect
           label="Interview Duration"
           placeholder="Select interview duration"
@@ -77,6 +80,8 @@ const InterviewDetailsForm: React.FC<{
           error={errors?.interviewDuration}
           touched={touched?.interviewDuration}
         />
+        </Box>
+        <Box position="relative" zIndex={8}>
         <FormSelect
           label="Interview Language"
           name="interviewLanguage"
@@ -88,6 +93,7 @@ const InterviewDetailsForm: React.FC<{
           touched={touched.interviewLanguage}
           value={values.interviewLanguage}
         />
+        </Box>
         <Flex w="100%" justify="flex-end" mt="4rem" gap="20px">
           <Button colorScheme="gray" type="button" onClick={() => handleTab(1)}>
             Previous

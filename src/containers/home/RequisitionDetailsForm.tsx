@@ -102,6 +102,7 @@ const RequisitionDetailsForm: React.FC<{
           error={errors?.noOfOpenings}
           touched={touched?.noOfOpenings}
         />
+        <Box position="relative" zIndex={10}>
         <FormSelect
           label="Gender"
           name="gender"
@@ -112,7 +113,11 @@ const RequisitionDetailsForm: React.FC<{
           error={errors.gender}
           touched={touched.gender}
           value={values.gender}
+          
+         
         />
+        </Box>
+        <Box position="relative" zIndex={9}></Box>
         <FormSelect
           label="Urgency"
           name="urgency"
@@ -123,7 +128,9 @@ const RequisitionDetailsForm: React.FC<{
           error={errors.urgency}
           touched={touched.urgency}
           value={values.urgency}
+         
         />
+        <Box/>
         <Flex w="100%" justify="flex-end" mt="4rem">
           <Button colorScheme="red" type="submit">
             Next
